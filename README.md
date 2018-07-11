@@ -37,3 +37,31 @@ $ chmod 755 ./holamundo.sh
 $ holamundo.sh
 hola mundo
 ```
+## Variables
+Las variables en bash son implícitas(no necesita declararse el tipo) y case sensitive. Para asignarle un valor basta con poner un nombre a la variable (sin espacios en el signo **=**); pero al invocarla hay que anteponerle el signo **$** al nombre.
+```bash
+#!/bin/bash
+USERNAME='joskal'
+echo $USERNAME
+```
+### Referenciar una variable con $ o ${}
+Es lo mismo referenciar una variable con **$** que con **${}**. La diferencia es que con **${}** podemos concatenar el contenido de la variable con otra expresión.
+```bash
+#!/bin/bash
+#con $
+USERNAME='Jose'
+echo $USERNAME
+
+$ Jose
+```
+```bash
+#!/bin/bash
+#con ${}
+USERNAME='Coche'
+echo ${USERNAME}cito
+
+$ Cochecito
+```
+
+### Quoting Vs Not-Quoting ("$VAR" vs $VAR)
+Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una palabra.
