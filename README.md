@@ -20,3 +20,18 @@ $ cat /etc/shells
 /bin/zsh
 /usr/local/bin/bash
 ```
+## Hola mundo
+vim holamundo.sh
+```bash
+#!/bin/bash
+echo "hola mundo"
+```
+Para ejecutar el script:
+```bash
+$ sh ./holamundo.sh
+hola mundo
+```
+También podemos asignar permisos de ejecución al archivo.
+```bash
+chmod 755 ./holamundo.sh
+```
