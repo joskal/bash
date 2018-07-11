@@ -33,5 +33,7 @@ hola mundo
 ```
 También podemos asignar permisos de ejecución al archivo.
 ```bash
-chmod 755 ./holamundo.sh
+$ chmod 755 ./holamundo.sh
+$ holamundo.sh
+hola mundo
 ```
