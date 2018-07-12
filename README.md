@@ -101,7 +101,11 @@ Los argumentos que pasemos a un script son interpretados como **parámetros posi
 * ${3} - parámetro 3 
 * ${4} - parámetro 4
 * $5 - parámetro 5
+
 ......
+
 * $9 - parámetro 9
 * ${10} - parámetro 10
+
 ........
+
