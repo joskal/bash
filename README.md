@@ -106,6 +106,14 @@ Los argumentos que pasemos a un script son interpretados como **parámetros posi
 * **$9** - parámetro 9
 * **${10}** - parámetro 10
 <br>......<br>
+
+**Parámetros especiales**<br>
+Si queremos saber cuantos parámetros posicionales hemos pasado al script, así como el nombre del mismo y otros detalles, recurriremos a los **parámetros especiales** (**$0, $\*, $@, $#**)
+* **$0** Devuelve el nombre del script que se está ejecutando.
+* **$#** Devuelve el número de argumentos (parámetros posicionales) que le hemos dado al script.
+* **$@** Devuelve todos los argumentos en una sola cadena.
+* **$\*** Idem al anterior, con la excepción de que si se usa entrecomillado, **"$\*"** es convertido a **"${1}x${2}x${3}x..."**, donde **x** es el primer carácter de la variable **IFS** (Internal Field Separator).
+
 ```bash
 $ vim args.sh
 IFS="-#"
@@ -126,12 +134,3 @@ Todos los parámetros: uno dos tres cuatro
 Todos los parámetros: uno-dos-tres-cuatro
 Número de parámetros: 4
 ```
-
-
-
-**Parámetros especiales**<br>
-Si queremos saber cuantos parámetros posicionales hemos pasado al script, así como el nombre del mismo y otros detalles, recurriremos a los **parámetros especiales** (**$0, $\*, $@, $#**)
-* **$0** Devuelve el nombre del script que se está ejecutando.
-* **$#** Devuelve el número de argumentos (parámetros posicionales) que le hemos dado al script.
-* **$@** Devuelve todos los argumentos en una sola cadena.
-* **$\*** Idem al anterior, con la excepción de que si se usa entrecomillado, **"$\*"** es convertido a **"${1}x${2}x${3}x..."**, donde **x** es el primer carácter de la variable **IFS** (Internal Field Separator).
