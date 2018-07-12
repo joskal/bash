@@ -64,7 +64,7 @@ $ Cochecito
 ```
 
 ### Quoting Vs Not-Quoting ("$VAR" vs $VAR)
-Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una palabra. Y cuando no, tendrá en cuenta cada palabra de la cadena.
+Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una sola cadena de texto. Y cuando no, interpretará como una cadena cada palabra del contenido.
 
 ```bash
 #!/bin/bash
@@ -93,3 +93,15 @@ $ Alicante
 $ Cadiz 
 $ Sevilla
 ```
+
+## Parámetros posicionales y especiales.
+Los argumentos que pasemos a un script son interpretados como **parámetros posicionales**. Podemos referenciarlos tanto con **$** como con **${}**.
+* $1 - parámetro 1
+* $2 - parámetro 2
+* ${3} - parámetro 3 
+* ${4} - parámetro 4
+* $5 - parámetro 5
+......
+* $9 - parámetro 9
+* ${10} - parámetro 10
+........
