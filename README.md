@@ -108,12 +108,13 @@ Los argumentos que pasemos a un script son interpretados como **parámetros posi
 <br>......<br>
 ```bash
 $ vim args.sh
+IFS="-#"
 echo "Nombre del script: $0"
 echo "Parámetro 1: $1"
 echo "Parámetro 2: $2"
 echo "Parámetro 3: $3"
-echo "Todos los parámetros: $*"
 echo "Todos los parámetros: $@"
+echo "Todos los parámetros: $*"
 echo "Número de parámetros: $#"
 
 $ ./args.sh uno dos tres cuatro
@@ -122,7 +123,7 @@ Parámetro 1: uno
 Parámetro 2: dos
 Parámetro 3: tres
 Todos los parámetros: uno dos tres cuatro
-Todos los parámetros: uno dos tres cuatro
+Todos los parámetros: uno-dos-tres-cuatro
 Número de parámetros: 4
 ```
 
