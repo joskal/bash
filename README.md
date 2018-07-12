@@ -141,28 +141,45 @@ Además de referenciar cada argumento por su posición (**$1, $2, $3...**), tamb
 ```bash
 vim ./rango.sh
   1 #!/bin/bash
-  2 echo "\$@        = $@"
-  3 start=2
-  4 count=3
-  5 echo "\${@:2}    = ${@:$start}"
-  6 echo "\${@:2:3}  = ${@:$start:$count}"
-  7 start=-4
-  8 echo "\${@:-4}   = ${@:$start}"
-  9 echo "\${@:-4:3} = ${@:$start:$count}"
- 10 echo "Looping range of arguments"
- 11 for i in "${@:$start:$count}"
- 12 do
- 13  echo "$i"
- 14 done
+  2 echo "Rango de parámetros"
+  3 echo "-------------------"
+  4 echo "\$@        = $@"
+  5 echo "\${@:2}    = ${@:2}"
+  6 echo "\${@:2:3}  = ${@:2:3}"
+  7 echo "\${@:-4}   = ${@:-4}"
+  8 echo "\${@:-4:3} = ${@:-4:3}"
  
 $ ./rango.sh 1 2 3 4 5 6
-$@        = 1 2 3 4 5 6
-${@:2}    = 2 3 4 5 6
+Rango de parámetros
+-------------------
+$@        = 1 2 3 4 5 6 7 8 9
+${@:2}    = 2 3 4 5 6 7 8 9
 ${@:2:3}  = 2 3 4
-${@:-4}   = 3 4 5 6
-${@:-4:3} = 3 4 5
-Looping range of arguments
-3
-4
-5
+${@:-4}   = 1 2 3 4 5 6 7 8 9
+${@:-4:3} = 1 2 3 4 5 6 7 8 9
+```
+
+**shift**<br>
+Este comando mueve **n** veces hacia la izquierda todos los parámetros posicionales. Si omitimos **n** lo moverá uno.
+```bash
+$ vim ./shift.sh
+  1 #!/bin/bash
+  2 # Mover hacia la izquierda los argumentos dos posiciones
+  3 echo "Número de parámetros (antes de shift): $#"
+  4 echo "Parámetros: $@"
+  5 shift 2
+  6 echo "Número de parámetros (después de shift): $#"
+  7 echo "Parámetros: $@"
+  8 echo "Parámetro 1: $1"
+  9 echo "Parámetro 2: $2"
+ 10 echo "Parámetro 3: $3"
+ 
+$ sh ./shift.sh 1 2 3 4 5 6 7 8 9
+Número de parámetros (antes de shift): 9
+Parámetros: 1 2 3 4 5 6 7 8 9
+Número de parámetros (después de shift): 7
+Parámetros: 3 4 5 6 7 8 9
+Parámetro 1: 3
+Parámetro 2: 4
+Parámetro 3: 5
 ```
