@@ -112,7 +112,7 @@ Si queremos saber cuantos parámetros posicionales hemos pasado al script, así 
 * **$0** Devuelve el nombre del script que se está ejecutando.
 * **$#** Devuelve el número de argumentos (parámetros posicionales) que le hemos dado al script.
 * **$@** Devuelve todos los argumentos en una sola cadena.
-* **$\*** Idem al anterior, con la excepción de que si se usa entrecomillado, **"$\*"** es convertido a **"${1}x${2}x${3}x..."**, donde **x** es el primer carácter de la variable **IFS** (Internal Field Separator).
+* **$\*** Idem al anterior, con la excepción de que si se usa entrecomillado, **"$\*"** es convertido a **"${1}x${2}x${3}x..."**, donde **x** es el primer carácter de la variable **IFS** (Internal Field Separator) que es utilizada como separador de palabras en una cadena de texto.
 
 ```bash
 $ vim args.sh
