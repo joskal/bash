@@ -96,16 +96,16 @@ $ Sevilla
 
 ## Parámetros posicionales y especiales.
 Los argumentos que pasemos a un script son interpretados como **parámetros posicionales**. Podemos referenciarlos tanto con **$** como con **${}**.
-* $1 - parámetro 1
-* $2 - parámetro 2
-* ${3} - parámetro 3 
-* ${4} - parámetro 4
-* $5 - parámetro 5
+* **$1** - parámetro 1
+* **$2** - parámetro 2
+* **${3}** - parámetro 3 
+* **${4}** - parámetro 4
+* **$5** - parámetro 5
 
 ......
 
-* $9 - parámetro 9
-* ${10} - parámetro 10
+* **$9** - parámetro 9
+* **${10}** - parámetro 10
 
 ........
-
+Si queremos saber cuantos parámetros posicionales hemos pasado al script, así como el nombre del mismo y otros detalles, recurriremos a los **parámetros especiales** (**$0, $\*, $@**)
