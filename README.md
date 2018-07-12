@@ -64,4 +64,32 @@ $ Cochecito
 ```
 
 ### Quoting Vs Not-Quoting ("$VAR" vs $VAR)
-Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una palabra.
+Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una palabra. Y cuando no, tendrá en cuenta cada palabra de la cadena.
+
+```bash
+#!/bin/bash
+#con quoting
+provincias="Alicante Cadiz Sevilla"
+for i in "$provincias"
+do
+  echo $i
+done
+
+$ #Mostrará sólo un resultado.
+$ Alicante Cadiz Sevilla
+```
+
+```bash
+#!/bin/bash
+#sin quoting
+provincias="Alicante Cadiz Sevilla"
+for i in $provincias
+do
+  echo $i
+done
+
+$ #Mostrará tres resultados.
+$ Alicante 
+$ Cadiz 
+$ Sevilla
+```
