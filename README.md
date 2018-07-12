@@ -116,14 +116,14 @@ Si queremos saber cuantos parámetros posicionales hemos pasado al script, así 
 
 ```bash
 $ vim args.sh
-IFS="-#"
-echo "Nombre del script: $0"
-echo "Parámetro 1: $1"
-echo "Parámetro 2: $2"
-echo "Parámetro 3: $3"
-echo "Todos los parámetros: $@"
-echo "Todos los parámetros: $*"
-echo "Número de parámetros: $#"
+  1 IFS="-#"
+  2 echo "Nombre del script: $0"
+  3 echo "Parámetro 1: $1"
+  4 echo "Parámetro 2: $2"
+  5 echo "Parámetro 3: $3"
+  6 echo "Todos los parámetros: $@"
+  7 echo "Todos los parámetros: $*"
+  8 echo "Número de parámetros: $#"
 
 $ ./args.sh uno dos tres cuatro
 Nombre de script: ./args.sh
@@ -133,4 +133,36 @@ Parámetro 3: tres
 Todos los parámetros: uno dos tres cuatro
 Todos los parámetros: uno-dos-tres-cuatro
 Número de parámetros: 4
+```
+
+**Rango de parámetros**<br>
+Además de referenciar cada argumento por su posición (**$1, $2, $3...**), también podemos referenciar un rango de parámetros posicionales de esta forma: **${@:$start:$count}**.
+
+```bash
+vim ./rango.sh
+  1 #!/bin/bash
+  2 echo "\$@        = $@"
+  3 start=2
+  4 count=3
+  5 echo "\${@:2}    = ${@:$start}"
+  6 echo "\${@:2:3}  = ${@:$start:$count}"
+  7 start=-4
+  8 echo "\${@:-4}   = ${@:$start}"
+  9 echo "\${@:-4:3} = ${@:$start:$count}"
+ 10 echo "Looping range of arguments"
+ 11 for i in "${@:$start:$count}"
+ 12 do
+ 13  echo "$i"
+ 14 done
+ 
+$ ./rango.sh 1 2 3 4 5 6
+$@        = 1 2 3 4 5 6
+${@:2}    = 2 3 4 5 6
+${@:2:3}  = 2 3 4
+${@:-4}   = 3 4 5 6
+${@:-4:3} = 3 4 5
+Looping range of arguments
+3
+4
+5
 ```
