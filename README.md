@@ -101,11 +101,12 @@ Los argumentos que pasemos a un script son interpretados como **parámetros posi
 * **${3}** - parámetro 3 
 * **${4}** - parámetro 4
 * **$5** - parámetro 5
-
-......
-
+<br>......<br>
 * **$9** - parámetro 9
 * **${10}** - parámetro 10
+<br>......<br>
 
-........
 Si queremos saber cuantos parámetros posicionales hemos pasado al script, así como el nombre del mismo y otros detalles, recurriremos a los **parámetros especiales** (**$0, $\*, $@**)
+* **$0** Devuelve el nombre del script que se está ejecutando.
+* **$#** Devuelve el número de argumentos (parámetros posicionales) que le hemos dado al script.
+* **$\*** Devuelve todos los argumentos en una sola cadena.
