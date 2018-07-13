@@ -63,8 +63,34 @@ echo ${USERNAME}cito
 $ Cochecito
 ```
 
-### Quoting Vs Not-Quoting ("$VAR" vs $VAR)
-Cuando referenciamos una variable entre comillas (**quoting**), el contenido será considerado como una sola cadena de texto. Y cuando no, interpretará como una cadena cada palabra del contenido.
+### Quoting
+En los scripts podemos emplear tanto comillas dobles como simples, aunque hay diferencias entre ellas. En las comillas dobles podemos expandir el contenido de una variable, mientras que en las simples no. Tanto en las dobles como en las simples se respetan los espacios que intercalemos entre palabras.
+```bash
+vim quoting.sh
+  1 #!/bin/bash
+  2 nombre="John Doe"
+  3 var1='$nombre'
+  4 var2="$nombre"
+  5
+  6 echo '$nombre=$nombre'
+  7 echo "\$nombre=$nombre"
+  8
+  9 echo "var1=" $var1
+ 10 echo "var2=" $var2
+ 11
+ 12 echo "This will not expand \$dollar"
+ 13 echo 'This will not expand $dollar'
+
+$./quoting.sh
+$nombre=$nombre
+$nombre=John Doe
+var1= $nombre
+var2= John Doe
+This will not expand $dollar
+This will not expand $dollar
+```
+**Quoting Vs Not-Quoting ("$VAR" vs $VAR)**<br>
+Cuando referenciamos una variable entre comillas dobles, el contenido será considerado como una sola cadena de texto. Y cuando no, interpretará como una cadena cada palabra del contenido.
 
 ```bash
 #!/bin/bash
@@ -92,12 +118,6 @@ $ #Mostrará tres resultados.
 $ Alicante 
 $ Cadiz 
 $ Sevilla
-```
-
-## Quoting
-En los scripts podemos emplear tanto comillas dobles como simples, aunque hay diferencias entre ellas. En las comillas dobles podemos expandir el contenido de una variables, mientras que en las simples no. Tanto en las dobles como en las simples se respetan los espacios que intercalemos entre palabras.
-```bash
-
 ```
 
 ## Parámetros posicionales y especiales.
