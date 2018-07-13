@@ -212,3 +212,34 @@ Parámetro 3: 5
 
 ## Expresiones aritméticas
 Podemos almacenar numeros en variables, pero a la hora de operar con ellos debemos recurrir a los comandos **let** y **expr**. También podemos calcular una expresión encerrándola entre paréntesis dobles **((expr))**
+
+### let
+**let** puede calcular múltiples expresiones en una sola línea
+
+**let expr1 expr2 expr3 ...**<br>
+
+```bash
+vim let.sh
+  1 #!/bin/bash
+  2 # sin let
+  3 n=3
+  4 echo "n=$n"
+  5 n=n+3
+  6 echo "n=n+3 = $n"
+  7
+  8 # con let
+  9 n=3
+ 10 let n=n+3
+ 11 echo "let n=n+3 = $n"
+ 12 # let soporta múltiples expresiones en una sola línea
+ 13 let i=i+5 sum=5 group=sum+5
+
+./let.sh
+n=3
+n=n+3 = n+3
+let n=n+3 = 6
+```
+
+### ((expression))
+La sintaxis **(())** le indica a bash que evalúe el contenido como una expresión. La sintaxis **())** hace exactamente lo mismo que **let**, con la diferencia de que **let** puede calcular varias expresiones en una sola línea y **(())** no. En **(())** se puede espacios en la expresión, cosa que en **let** no, ya que las expresiones se separan por un espacio.
+
