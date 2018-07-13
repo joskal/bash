@@ -88,32 +88,32 @@ This will not expand $dollar
 Cuando referenciamos una variable entre comillas dobles, el contenido será considerado como una sola cadena de texto. Y cuando no, interpretará como una cadena cada palabra del contenido.
 
 ```bash
-#!/bin/bash
-#con quoting
-provincias="Alicante Cadiz Sevilla"
-for i in "$provincias"
-do
-  echo $i
-done
-
-$ #Mostrará sólo un resultado.
-$ Alicante Cadiz Sevilla
+vim quoting.sh
+  1 #!/bin/bash
+  2 provincias="Alicante Cadiz Sevilla"
+  3 echo 'con "quoting"'
+  4 for i in "$provincias"
+  5 do
+  6   echo $i
+  7 done
+  8 echo "---------------------------"
+  9 echo "sin quoting"
+ 10 for i in $provincias
+ 11 do
+ 12   echo $i
+ 13 done
+ 
+$ ./quoting.sh
+con "quoting"
+Alicante Cadiz Sevilla
+---------------------------
+sin quoting
+Alicante
+Cadiz
+Sevilla
 ```
-
-```bash
-#!/bin/bash
-#sin quoting
-provincias="Alicante Cadiz Sevilla"
-for i in $provincias
-do
-  echo $i
-done
-
-$ #Mostrará tres resultados.
-$ Alicante 
-$ Cadiz 
-$ Sevilla
-```
+### Declare (declaración de variables)
+Normalmente no necesitamos declarar el tipo de una variable. No obstante bash nos permite declarar variables de tipo entero, de sólo lectura, arrays, arrays asociativos y de tipo export.
 
 ## Parámetros posicionales y especiales.
 **Parámetros posicionales**<br>
