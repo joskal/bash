@@ -1,4 +1,4 @@
-# bash
+# Bash shelll programming
 Para empezar a crear código en bash, la primera línea de nuestro código ha de empezar por esta secuencia de caracteres **#!** (conocida como **shebang**) seguido del nombre del intérprete que vamos a usar. Los intérpretes pueden ser:
 ```bash
 #!/bin/sh — Execute the file using sh, the Bourne shell, or a compatible shell
@@ -92,6 +92,12 @@ $ #Mostrará tres resultados.
 $ Alicante 
 $ Cadiz 
 $ Sevilla
+```
+
+## Quoting
+En los scripts podemos emplear tanto comillas dobles como simples, aunque hay diferencias entre ellas. En las comillas dobles podemos expandir el contenido de una variables, mientras que en las simples no. Tanto en las dobles como en las simples se respetan los espacios que intercalemos entre palabras.
+```bash
+
 ```
 
 ## Parámetros posicionales y especiales.
