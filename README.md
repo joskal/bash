@@ -209,3 +209,6 @@ Parámetro 1: 3
 Parámetro 2: 4
 Parámetro 3: 5
 ```
+
+## Expresiones aritméticas
+Podemos almacenar numeros en variables, pero a la hora de operar con ellos debemos recurrir a los comandos **let** y **expr**. También podemos calcular una expresión encerrándola entre paréntesis dobles **((expr))**
