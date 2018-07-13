@@ -113,7 +113,12 @@ Cadiz
 Sevilla
 ```
 ### Declare (declaración de variables)
-Normalmente no necesitamos declarar el tipo de una variable. No obstante bash nos permite declarar variables de tipo entero, de sólo lectura, arrays, arrays asociativos y de tipo export.
+Normalmente no necesitamos declarar el tipo de una variable. No obstante bash nos permite declarar variables de tipo entero, de sólo lectura, arrays, arrays asociativos y de tipo export. Las variables sin declarar pueden tomar cambiar el tipo sin devolver error a lo largo de la ejecución.
+* **declare -i total**      #tipo entero
+* **declare -r casa=roja**  #tipo solo lectura
+* **declare -x global=mundo** #tipo global. Estará activo incluso cuando termine el script.
+* **declare -a** #tipo array.
+* **declare -A** #tipo array asociativo.
 
 ## Parámetros posicionales y especiales.
 **Parámetros posicionales**<br>
