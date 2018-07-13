@@ -21,10 +21,10 @@ $ cat /etc/shells
 /usr/local/bin/bash
 ```
 ## Hola mundo
-vim holamundo.sh
 ```bash
-#!/bin/bash
-echo "hola mundo"
+vim holamundo.sh
+  1 #!/bin/bash
+  2 echo "Hola mundo"
 ```
 Para ejecutar el script:
 ```bash
@@ -40,27 +40,22 @@ hola mundo
 ## Variables
 Las variables en bash son implícitas(no necesita declararse el tipo) y case sensitive. Para asignarle un valor basta con poner un nombre a la variable (sin espacios en el signo **=**); pero al invocarla hay que anteponerle el signo **$** al nombre.
 ```bash
-#!/bin/bash
-USERNAME='joskal'
-echo $USERNAME
+  1 #!/bin/bash
+  2 USERNAME="joskal"
+  3 echo $USERNAME
 ```
 ### Referenciar una variable con $ o ${}
 Es lo mismo referenciar una variable con **$** que con **${}**. La diferencia es que con **${}** podemos concatenar el contenido de la variable con otra expresión.
 ```bash
-#!/bin/bash
-#con $
-USERNAME='Jose'
-echo $USERNAME
+vim var1.sh
+  1 #!/bin/bash
+  2 nombre="coche"
+  3 echo "\$nombre: $nombre"
+  4 echo "\${nombre}: ${nombre}cito"
 
-$ Jose
-```
-```bash
-#!/bin/bash
-#con ${}
-USERNAME='Coche'
-echo ${USERNAME}cito
-
-$ Cochecito
+./var1.sh
+$nombre: coche
+${nombre}: cochecito
 ```
 
 ### Quoting
