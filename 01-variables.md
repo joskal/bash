@@ -1,3 +1,5 @@
+# Variables, parámetros y expresiones aritméticas
+
 ## Variables
 Las variables en bash son implícitas(no necesita declararse el tipo) y case sensitive. Para asignarle un valor basta con poner un nombre a la variable (sin espacios en el signo **=**); pero al invocarla hay que anteponerle el signo **$** al nombre.
 ```bash
