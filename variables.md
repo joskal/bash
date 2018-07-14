@@ -203,4 +203,3 @@ let n=n+3 = 6
 
 ### ((expression))
 La sintaxis **(())** le indica a bash que evalúe el contenido como una expresión. La sintaxis **(())** hace exactamente lo mismo que **let**, con la diferencia de que **let** puede calcular varias expresiones en una sola línea y **(())** no. En **(())** se puede poner espacios dentro la expresión, en **let** el espacio se interpreta como un separador de expresiones.
-
