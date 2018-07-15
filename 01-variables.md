@@ -128,7 +128,7 @@ Número de parámetros: 4
 Además de referenciar cada argumento por su posición (**$1, $2, $3...**), también podemos referenciar un rango de parámetros posicionales de esta forma: **${@:$start:$count}**.
 
 ```bash
-vim ./rango.sh
+$ vim ./rango.sh
   1 #!/bin/bash
   2 echo "Rango de parámetros"
   3 echo "-------------------"
@@ -182,7 +182,7 @@ Podemos almacenar numeros en variables, pero a la hora de operar con ellos debem
 **let expr1 expr2 expr3 ...**<br>
 
 ```bash
-vim let.sh
+$ vim let.sh
   1 #!/bin/bash
   2 # sin let
   3 n=3
@@ -197,7 +197,7 @@ vim let.sh
  12 # let soporta múltiples expresiones en una sola línea
  13 let i=i+5 sum=5 group=sum+5
 
-./let.sh
+$ ./let.sh
 n=3
 n=n+3 = n+3
 let n=n+3 = 6
@@ -208,7 +208,7 @@ La sintaxis **(())** le indica a bash que evalúe el contenido como una expresi�
 ### expr
 **expr** es un comando unix, pero que no es nativo en bash, el cual se puede usar también para calcular expresiones.
 ```bash
-vim ./let2.sh
+$ vim ./let2.sh
   1 #!/bin/bash
   2 #Expresiones con let
   3 #Las expresiones se separan por espacios
@@ -229,7 +229,7 @@ vim ./let2.sh
  18 total=`expr $total + 2`
  19 echo "expr total: $total"
 
-sh let2.sh
+$ sh let2.sh
 neto: 200   sum:210   total:410
 x:3   y:7   z:10
 x+10=13
