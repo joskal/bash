@@ -208,6 +208,7 @@ La sintaxis **(())** le indica a bash que eval√∫e el contenido como una expresi√
 ### expr
 **expr** es un comando unix, pero que no es nativo en bash, el cual se puede usar tambi√©n para calcular expresiones.
 ```bash
+vim ./let2.sh
   1 #!/bin/bash
   2 #Expresiones con let
   3 #Las expresiones se separan por espacios
@@ -227,5 +228,10 @@ La sintaxis **(())** le indica a bash que eval√∫e el contenido como una expresi√
  17 #expr
  18 total=`expr $total + 2`
  19 echo "expr total: $total"
-~
+
+sh let2.sh
+neto: 200   sum:210   total:410
+x:3   y:7   z:10
+x+10=13
+expr total: 412
 ```
