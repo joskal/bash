@@ -205,3 +205,27 @@ let n=n+3 = 6
 
 ### ((expression))
 La sintaxis **(())** le indica a bash que evalúe el contenido como una expresión. La sintaxis **(())** hace exactamente lo mismo que **let**, con la diferencia de que **let** puede calcular varias expresiones en una sola línea y **(())** no. En **(())** se puede poner espacios dentro la expresión, en **let** el espacio se interpreta como un separador de expresiones.
+### expr
+**expr** es un comando unix, pero que no es nativo en bash, el cual se puede usar también para calcular expresiones.
+```bash
+  1 #!/bin/bash
+  2 #Expresiones con let
+  3 #Las expresiones se separan por espacios
+  4 let neto=200  sum=neto+10 total=neto+sum
+  5 echo "neto: $neto   sum:$sum   total:$total"
+  6
+  7 #Expresiones con (())
+  8 #Solo calcula una expresión, pero puede contener espacios
+  9 ((x = 3))
+ 10 ((y = x + 4))
+ 11 ((z = x+y))
+ 12 echo "x:$x   y:$y   z:$z"
+ 13
+ 14 #Dentro de echo se puede calcular una expresión con $(())
+ 15 echo "x+10=$((x+10))"
+ 16
+ 17 #expr
+ 18 total=`expr $total + 2`
+ 19 echo "expr total: $total"
+~
+```
