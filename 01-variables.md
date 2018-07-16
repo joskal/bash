@@ -254,3 +254,41 @@ expr total: 412
 **Auto Incrementos y decrementos**
 * **++** Incrementa la variable en una unidad. `let n++`
 * **--** Decrementa la variable en una unidad. `let n--`
+```bash
+$ vim operators.sh
+  1 n=10
+  2 j=5
+  3 i=35
+  4 echo "n=$n \t j=$j \t i=$i"
+  5 let n+=10
+  6 echo "n+=10 \t $n"
+  7 let j*=3
+  8 echo "j*=3 \t $j"
+  9 let i%=3
+ 10 echo "i%=3 \t $i"
+ 11 let j++
+ 12 echo "j++ \t $j"
+ 13 let ++j
+ 14 echo "++j \t $j"
+ 15
+ 16 echo "++j \t $((++j))\t Preincremento"
+ 17 echo "j++ \t $((j++))\t Posincremento"
+ 18 echo "j=$j"
+ 19 echo "--n \t $((++n))\t Predecremento"
+ 20 echo "n++ \t $((n++))\t Posdecremento"
+ 21 echo "n=$n"
+ 
+$ sh ./operators.sh
+n=10 	 j=5 	 i=35
+n+=10 	 20
+j*=3 	 15
+i%=3 	 2
+j++ 	 16
+++j 	 17
+++j 	 18	 Preincremento
+j++ 	 18	 Posincremento
+j=19
+--n 	 21	 Predecremento
+n++ 	 21	 Posdecremento
+n=22
+```
