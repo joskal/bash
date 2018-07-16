@@ -235,3 +235,22 @@ x:3   y:7   z:10
 x+10=13
 expr total: 412
 ```
+## Operadores aritméticos
+**Operadores aritméticos básicos**
+* **+**
+* **-**
+* **\***
+* **/**
+* **%** Módulo, resto de una división. `7%2 = 1`
+* **\*\*** Potenciación. `10**3 = 10*10*10`
+
+**Shortcuts para operadores aritméticos**
+* **+=** Suma a la variable una constante. `let n+=3`
+* **-=** Resta a la variable una constante. `let i-=5`
+* **\*=** Multiplica la variable por una constante. `let n*=5`
+* **/=** Divide la variable entre una constante. `let n/=10`
+* **%=** Devuelve el resto de  la variable por una constante. `let n%=3`
+
+**Auto Incrementos y decrementos**
+* **++** Incrementa la variable en una unidad. `let n++`
+* **--** Decrementa la variable en una unidad. `let n--`
