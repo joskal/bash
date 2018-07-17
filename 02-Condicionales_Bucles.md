@@ -88,7 +88,7 @@ $ vim operators-string.sh
  24  echo "-z: pais is null"
  25 fi
  
-$ operators-string.sh
+$ operators-string.sh spain
 ==: pais is spain
 >: spain comes after italia
 -n: pais is not null
