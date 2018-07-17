@@ -55,8 +55,8 @@ $ ./operators-number.sh 100
 | = | Equal to |
 | == | Equal to |
 | != | Not Equal to |
-| \< | Less Than |
-| \> | Greather Than |
+| \\< | Less Than |
+| \\> | Greather Than |
 | -z | Zero Byte. Empty |
 | -n | Not Empty |
 
