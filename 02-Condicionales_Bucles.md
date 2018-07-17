@@ -93,3 +93,20 @@ $ operators-string.sh spain
 >: spain comes after italia
 -n: pais is not null
 ```
+
+Podemos comprobar el valor que devuelven los operadores de comparación haciendo lo siguiente:
+```bash
+$ [ 1 -eq 1 ]; echo $?
+0
+$ [ 1 -eq 2 ]; echo $?
+1
+$ test 1 -eq 1; echo $?
+0
+$ [ "jose" == "joss" ]; echo $?
+1
+$ [ "jose" == "jose" ]; echo $?
+0
+$ [ 3 -gt 2 ]; echo $?
+0
+```
+Como podemos comprobar el resultado verdadero devuelve 0.
