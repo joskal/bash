@@ -59,3 +59,37 @@ $ ./operators-number.sh 100
 | > | Greather Than |
 | -z | Zero Byte. Empty |
 | -n | Not Empty |
+
+```bash
+$ vim operators-string.sh
+  1 #!bin/bash
+  2 pais=${1}
+  3 if [ "$pais" == "spain" ]; then
+  4   echo "==: pais is california"
+  5 fi
+  6
+  7 if [ "$pais" != "spain" ]; then
+  8   echo "==: pais is not spain"
+  9 fi
+ 10
+ 11 if [ "$pais" \< "italia" ]; then
+ 12  echo "<: pais comes before italia"
+ 13 fi
+ 14
+ 15 if [ "$pais" \> "italia" ]; then
+ 16  echo ">: pais comes after italia"
+ 17 fi
+ 18
+ 19 if [ -n "$pais" ]; then
+ 20  echo "-n: pais is not null"
+ 21 fi
+ 22
+ 23 if [ -z "$pais" ]; then
+ 24  echo "-z: pais is null"
+ 25 fi
+ 
+$ operators-string.sh
+==: pais is spain
+>: spain comes after italia
+-n: pais is not null
+```
