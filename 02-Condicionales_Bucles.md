@@ -65,7 +65,7 @@ $ vim operators-string.sh
   1 #!bin/bash
   2 pais=${1}
   3 if [ "$pais" == "spain" ]; then
-  4   echo "==: pais is california"
+  4   echo "==: pais is spain"
   5 fi
   6
   7 if [ "$pais" != "spain" ]; then
