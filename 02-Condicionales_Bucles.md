@@ -1,4 +1,9 @@
 # Comandos condicionales y bucles
+## test command
+El comando test verifica que se está cumpliendo la condición.
+```bash
+test
+```
 Antes de pasar a los comandos condicionales conviene conocer los operadores de comparación numéricos y de cadena.
 ## Operadores de comparación numéricos
 Para comparar números usaremos los siguientes operadores:
