@@ -23,7 +23,7 @@ Las salidas se pueden redireccionar a o desde un archivo mediante los operadores
   </tr>
   <tr>
     <td> >> </td>
-    <td>Redirecciona <code>stdout</code> a un archivo, concatenando con el contenido del mismo </td>
+    <td>Redirecciona <code>stdout</code> a un archivo, concatenando la salida con el contenido del mismo </td>
   </tr>
 </table>  
 
