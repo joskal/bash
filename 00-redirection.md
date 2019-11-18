@@ -7,11 +7,32 @@ Un File Descriptor es una zona a la que el comando envía su salida.
 2:  stderr    standar error
 ```
 
-Para redigir la salida estándar (stdout) si no se da ningún error.
+Para redigir la salida estándar `stdout` a un fichero, si no se da ningún error:
 ```bash
-cat fichero 1> resultado
+cat listado 1> fichero.txt
 ```
-Podemos omitir el número de stdout.
+Podemos omitir el número de stdout, ya que por defecto es 1.
 ```bash
-cat fichero > resultado
+cat listado > fichero
+```
+Si el fichero `listado` no existe, devolverá un error `stderr`, el cual se puede redireccionar con `2>`
+```bash
+cat listado 2> error.txt
+```
+Agregar la fecha al final de fichero.txt
+```bash
+date >> fecha.txt
+```
+Se puede silenciar la salida de cualquier comando direccionándola a /dev/null
+
+```bash
+cat fichero.txt > /dev/null
+```
+Si el fichero.txt no existe devolverá un error, el cual también se puede silenciar.
+```bash
+cat fichero.txt 2> /dev/null
+```
+Los redireccionamientos `stdout` y `stderr` se pueden usar en el mismo comando. 
+```bash
+cat fichero.txt > /dev/null 2> /dev/null
 ```
