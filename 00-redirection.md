@@ -2,9 +2,30 @@
 ## File Descriptor.
 Un File Descriptor es una zona donde el comando envía una salida (`stdout`,  `stderr`) o recibe una entrada (`stdin`).
 
-`0:stdin`     standar input<br>
-`1:stdout`    standar output<br>
-`2:stderr`    standar error<br>
+`0:stdin`     standard input<br>
+`1:stdout`    standard output<br>
+`2:stderr`    standard error<br>
+
+La salida estándar `stdout` se produce cuando un comando se ejecuta sin errores. En caso contrario, se produce la salida `stderr`. 
+Las salidas se pueden redireccionar a o desde un archivo mediante los operadores de redirección.
+<table>
+  <thead>
+    <tr>
+      <th>Operador</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tr>
+    <td> > </td>
+    <td>Redirecciona <code>stdout</code> a un archivo. Si existe, lo sobreescribe; si no, lo crea<br>
+    <code>ls -l > listado.txt </code>
+    </td>
+  </tr>
+  <tr>
+    <td> >> </td>
+    <td>Redirecciona <code>stdout</code> a un archivo, concatenando con el contenido del mismo </td>
+  </tr>
+</table>  
 
 
 Para redigir la salida estándar `stdout` a un fichero, si no se da ningún error:
