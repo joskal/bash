@@ -1,11 +1,11 @@
 # Redireccionamiento
 ## File Descriptor.
 Un File Descriptor es una zona a la que el comando envía su salida.
-```bash
-0:  stdin     standar input
-1:  stdout    standar output
-2:  stderr    standar error
-```
+
+`0:stdin`     standar input<br>
+`1:stdout`    standar output<br>
+`2:stderr`    standar error<br>
+
 
 Para redigir la salida estándar `stdout` a un fichero, si no se da ningún error:
 ```bash
