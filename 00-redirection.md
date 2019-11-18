@@ -1,6 +1,6 @@
 # Redireccionamiento
 ## File Descriptor.
-Un File Descriptor es una zona a la que el comando envía una salida (`stdout`,  `stderr`) o recibe una entrada (`stdin`).
+Un File Descriptor es una zona donde el comando envía una salida (`stdout`,  `stderr`) o recibe una entrada (`stdin`).
 
 `0:stdin`     standar input<br>
 `1:stdout`    standar output<br>
