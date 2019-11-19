@@ -91,7 +91,10 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
   <tr>
     <td> &&<br>|| </td>
     <td>
-      Operadores lógicos que condicionan la ejecución de un comando en función del otro.
+      Ejecutar el comando2 solo si se ejecuta el comando1:
+      <code>$ comando1 && comando2</code><br><br>
+      Ejecutar el comando2 solo si no se ejecuta el comando1:
+      <code>$ comando1 || comando2</code>
     </td>
   </tr>
 
