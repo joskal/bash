@@ -72,7 +72,22 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
           <code>9</code>
     </td>
   </tr>
-    
+  <tr>
+    <td> | </td>
+    <td>
+      Pipe<br>
+      <code> | </code> Es un tipo de redireccionamiento por el cual se indica que la salida de un comando es la entrada del otro.<br>
+      <code> ls ./ | grep pruebas </code>
+    </td>
+  </tr>
+  <tr>
+    <td> tee </td>
+    <td>
+      Comando que en conjunción con <code> | </code> redirecciona la salida a la terminal y a un archivo al mismo tiempo. <br>
+      <code> ps -ef | tee procesos.txt </code><br>
+      Con <code> tee -a </code> concatena al final del fichero. 
+    </td>
+  </tr>
 </table>  
 
 
