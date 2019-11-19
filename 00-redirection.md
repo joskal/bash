@@ -41,6 +41,32 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       En el ejemplo siguiente se adjunta el fichero <code>presupuesto.txt</code> al email que se va a enviar.<br>
       <code>mail -s "asunto a tratar" joskal@gmail.com < presupuesto.txt</code>
     </td>
+  </tr>
+  <tr>
+    <td>
+      <<
+    </td>
+    <td>
+      HEREDOC o HereDoc.<br>
+      Consiste en un bloque de texto que puede ser redireccionado a un comando o archivo de una manera interactiva.<br>
+      Funciona indicando una palabra como delimitador que cierra el bloque de texto. El usuario va introduciendo el texto y 
+      cuando introduce una línea nueva con la palabra delimitadora, termina ya la introducción de texto.<br>
+      <code> $>  wc << fin </code><br>
+      <code> > alfa </code><br>
+      <code> > beta gamma </code><br>
+      <code> > fin </code> </code><br>
+      En este caso, la palabra que cierra el bloque de texto es <code>fin</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <<<
+    </td>
+    <td>
+      HERESTRING
+    </td>
+  </tr>
+    
 </table>  
 
 
