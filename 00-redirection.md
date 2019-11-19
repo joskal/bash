@@ -16,16 +16,20 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
     </tr>
   </thead>
   <tr>
-    <td> 1> <br> > </td>
+    <td> 1> <br> > <br> 1>> <br> >> </td>
     <td>Redirecciona <code>stdout</code> a un archivo. Si existe, lo sobreescribe; si no, lo crea.<br>
       Podemos omitir el número de stdout, ya que por defecto es 1.<br>
-    <code>ls -l > listado.txt </code>
+    <code>ls -l > listado.txt </code> <br>
+      Para concatenar la salida con el contenido del fichero, es decir, añadiendo la salida al final del archivo sin perder el anterior contenido, usaremos <code> >> </code>.<br>
+      <code>date >> fechas.txt </code><br>
+      <code>ps -ef >> procesos.txt  </code>
     </td>
   </tr>
   <tr>
-    <td> >> </td>
-    <td>Redirecciona <code>stdout</code> a un archivo, concatenando la salida con el contenido del mismo, es decir, añadiendo la salida al final del archivo sin perder el anterior contenido.<br>
-      <code>ps -ef >> procesos.txt  </code>
+    <td> 2> <br> 2>> </td>
+    <td>Redirecciona <code>stderr</code> (salida de errores) a un archivo.<br>
+      En este ejemplo, si se produce algún mensaje de error lo envía a <code>error.txt</code><br>
+    <code>cp file1 file2 2> error.txt </code>
     </td>
   </tr>
 </table>  
