@@ -7,7 +7,7 @@ Un File Descriptor es una zona donde el comando envía una salida (`stdout`,  `s
 `2:stderr`    standard error<br>
 
 La salida estándar `stdout` se produce cuando un comando se ejecuta sin errores. En caso contrario, se produce la salida `stderr`. 
-Las salidas se pueden redireccionar a o desde un archivo mediante los operadores de redirección.
+Las salidas se pueden redireccionar hacia o desde un archivo mediante los operadores de redirección.
 <table>
   <thead>
     <tr>
@@ -16,14 +16,17 @@ Las salidas se pueden redireccionar a o desde un archivo mediante los operadores
     </tr>
   </thead>
   <tr>
-    <td> > </td>
-    <td>Redirecciona <code>stdout</code> a un archivo. Si existe, lo sobreescribe; si no, lo crea<br>
+    <td> 1> <br> > </td>
+    <td>Redirecciona <code>stdout</code> a un archivo. Si existe, lo sobreescribe; si no, lo crea.<br>
+      Podemos omitir el número de stdout, ya que por defecto es 1.<br>
     <code>ls -l > listado.txt </code>
     </td>
   </tr>
   <tr>
     <td> >> </td>
-    <td>Redirecciona <code>stdout</code> a un archivo, concatenando la salida con el contenido del mismo </td>
+    <td>Redirecciona <code>stdout</code> a un archivo, concatenando la salida con el contenido del mismo, es decir, añadiendo la salida al final del archivo sin perder el anterior contenido.<br>
+      <code>ps -ef >> procesos.txt  </code>
+    </td>
   </tr>
 </table>  
 
