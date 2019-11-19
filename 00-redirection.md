@@ -88,6 +88,13 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       Con <code> tee -a </code> concatena al final del fichero. 
     </td>
   </tr>
+  <tr>
+    <td> &&<br>|| </td>
+    <td>
+      Operadores lógicos que condicionan la ejecución de un comando en función del otro.
+    </td>
+  </tr>
+
 </table>  
 
 
