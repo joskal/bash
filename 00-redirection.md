@@ -34,6 +34,11 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       <code>cp file1 file2 2>> error.txt </code>
     </td>
   </tr>
+  <tr>
+    <td> 0< <br> < </td>
+    <td>
+      Redirecciona <code>stdin</code> desde un archivo. El archivo es la entrada del comando.
+    </td>
 </table>  
 
 
