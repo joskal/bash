@@ -63,7 +63,13 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       <<<
     </td>
     <td>
-      HERESTRING
+      HERESTRING<br>
+      A este operador no se le envía un bloque de texto con un delimitador, sino que se le redirecciona una cadena alfanumérica.<br>
+      <code>$> sed 's/hola/HOLA/' <<< "hola mundo"</code><br>
+        <code>HOLA mundo</code><br>
+        <br>
+        <code> $> bc <<< 3*3</code><br>
+          <code>9</code>
     </td>
   </tr>
     
