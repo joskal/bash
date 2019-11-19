@@ -92,31 +92,15 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
     <td> &&<br>|| </td>
     <td>
       Ejecutar el comando2 solo si se ejecuta el comando1:
-      <code>$ comando1 && comando2</code><br><br>
+      <code>$ comando1 && comando2</code><br>
       Ejecutar el comando2 solo si no se ejecuta el comando1:
-      <code>$ comando1 || comando2</code>
+      <code>$ comando1 || comando2</code><br> <br>
+      
     </td>
   </tr>
-
 </table>  
 
 
-Para redigir la salida estándar `stdout` a un fichero, si no se da ningún error:
-```bash
-cat listado 1> fichero.txt
-```
-Podemos omitir el número de stdout, ya que por defecto es 1.
-```bash
-cat listado > fichero
-```
-Si el fichero `listado` no existe, devolverá el error estándar `stderr`, el cual se puede redireccionar con `2>`
-```bash
-cat listado 2> error.txt
-```
-Agregar la fecha al final de fichero.txt
-```bash
-date >> fecha.txt
-```
 Se puede silenciar la salida de cualquier comando direccionándola a /dev/null
 
 ```bash
