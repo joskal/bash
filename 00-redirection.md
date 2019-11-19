@@ -29,7 +29,9 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
     <td> 2> <br> 2>> </td>
     <td>Redirecciona <code>stderr</code> (salida de errores) a un archivo.<br>
       En este ejemplo, si se produce algún mensaje de error lo envía a <code>error.txt</code><br>
-    <code>cp file1 file2 2> error.txt </code>
+    <code>cp file1 file2 2> error.txt </code> <br>
+      Si queremos concatenar la salida <code>stderr</code> al archivo:<br>
+      <code>cp file1 file2 2>> error.txt </code>
     </td>
   </tr>
 </table>  
