@@ -37,7 +37,9 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
   <tr>
     <td> 0< <br> < </td>
     <td>
-      Redirecciona <code>stdin</code> desde un archivo. El archivo es la entrada del comando.
+      Redirecciona <code>stdin</code> desde un archivo. El archivo es la entrada del comando.<br>
+      En el ejemplo siguiente se adjunta el fichero <code>presupuesto.txt</code> al email que se va a enviar.<br>
+      <code>mail -s "asunto a tratar" joskal@gmail.com < presupuesto.txt</code>
     </td>
 </table>  
 
