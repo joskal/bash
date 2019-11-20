@@ -95,7 +95,6 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       <code>$ comando1 && comando2</code><br>
       Ejecutar el comando2 solo si no se ejecuta el comando1:
       <code>$ comando1 || comando2</code><br> <br>
-      
     </td>
   </tr>
 </table>  
