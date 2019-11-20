@@ -95,6 +95,10 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
       <code>$ comando1 && comando2</code><br>
       Ejecutar el comando2 solo si no se ejecuta el comando1:
       <code>$ comando1 || comando2</code><br> <br>
+      <code>ls -l pepe && echo "Este mensaje aparecerá únicamente si pepe existe"</code><br>
+      <code>ls -l pepe || echo "Este mensaje aparecerá en caso de que pepe no exista"</code><br><br>
+      Obviamente se pueden utilizar ambos operadores a la vez.<br>
+      <code>ls -l jose && echo "El fichero existe" || echo "El fichero no existe"</code>
     </td>
   </tr>
 </table>  
