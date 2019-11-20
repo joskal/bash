@@ -103,11 +103,9 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
   </tr>
 </table>  
 
-
-Se puede silenciar la salida de cualquier comando direccionándola a /dev/null
-
+Podemos anular tanto la salida estándar 'stdout' como 'stderr' redireccionándola a '/dev/null'
 ```bash
-cat fichero.txt > /dev/null
+ls -l welcome.txt >/dev/null 2>/dev/null && echo "El fichero existe" || echo "El fichero no existe"
 ```
 Si el fichero.txt no existe devolverá un error, el cual también se puede silenciar.
 ```bash
