@@ -103,7 +103,7 @@ Las salidas se pueden redireccionar hacia o desde un archivo mediante los operad
   </tr>
 </table>  
 
-Podemos anular tanto la salida estándar 'stdout' como 'stderr' redireccionándola a '/dev/null'
+Podemos anular tanto la salida estándar `stdout` como `stderr` redireccionándola a `/dev/null`
 ```bash
 ls -l welcome.txt >/dev/null 2>/dev/null && echo "El fichero existe" || echo "El fichero no existe"
 ```
