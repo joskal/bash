@@ -107,11 +107,3 @@ Podemos anular tanto la salida estándar `stdout` como `stderr` redireccionándo
 ```bash
 ls -l welcome.txt >/dev/null 2>/dev/null && echo "El fichero existe" || echo "El fichero no existe"
 ```
-Si el fichero.txt no existe devolverá un error, el cual también se puede silenciar.
-```bash
-cat fichero.txt 2> /dev/null
-```
-Los redireccionamientos `stdout` y `stderr` se pueden usar en el mismo comando. 
-```bash
-cat fichero.txt > main.txt 2> errors.txt
-```
