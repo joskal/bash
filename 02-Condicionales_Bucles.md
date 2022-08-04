@@ -46,7 +46,9 @@ $ vim operators-number.sh
  25 if [ $n -ge 100 ]; then
  26  echo "-le: n is greater than or equal to 100"
  27 fi
+```
 
+```bash
 $ ./operators-number.sh 100
 -eq: n is equal to 100
 -le: n is less than or equal to 100
@@ -92,7 +94,9 @@ $ vim operators-string.sh
  23 if [ -z "$pais" ]; then
  24  echo "-z: pais is null"
  25 fi
- 
+```
+
+```bash
 $ operators-string.sh spain
 ==: pais is spain
 >: spain comes after italia
