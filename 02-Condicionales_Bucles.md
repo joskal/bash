@@ -19,33 +19,33 @@ Para comparar números usaremos los siguientes operadores:
 
 ```bash
 $ vim operators-number.sh
-  1 #!/bin/bash
-  2 #Number comparison
-  3 n=${1}
-  4
-  5 if [ $n -eq 100 ]; then
-  6  echo "-eq: n is equal to 100"
-  7 fi
-  8
-  9 if [ $n -ne 100 ]; then
- 10  echo "-ne: n is NOT equal to 100"
- 11 fi
- 12
- 13 if [ $n -lt 100 ]; then
- 14      echo "-lt: n is less than 100"
- 15 fi
- 16
- 17 if [ $n -gt 100 ]; then
- 18  echo "-gt: n is greater than 100"
- 19 fi
- 20
- 21 if [ $n -le 100 ]; then
- 22  echo "-le: n is less than or equal to 100"
- 23 fi
- 24
- 25 if [ $n -ge 100 ]; then
- 26  echo "-le: n is greater than or equal to 100"
- 27 fi
+#!/bin/bash
+#Number comparison
+n=${1}
+
+if [ $n -eq 100 ]; then
+  echo "-eq: n is equal to 100"
+fi
+
+if [ $n -ne 100 ]; then
+  echo "-ne: n is NOT equal to 100"
+fi
+
+if [ $n -lt 100 ]; then
+  echo "-lt: n is less than 100"
+fi
+
+if [ $n -gt 100 ]; then
+  echo "-gt: n is greater than 100"
+fi
+
+if [ $n -le 100 ]; then
+  echo "-le: n is less than or equal to 100"
+fi
+
+if [ $n -ge 100 ]; then
+ echo "-le: n is greater than or equal to 100"
+fi
 ```
 
 ```bash
@@ -69,31 +69,31 @@ $ ./operators-number.sh 100
 
 ```bash
 $ vim operators-string.sh
-  1 #!bin/bash
-  2 pais=${1}
-  3 if [ "$pais" == "spain" ]; then
-  4   echo "==: pais is spain"
-  5 fi
-  6
-  7 if [ "$pais" != "spain" ]; then
-  8   echo "==: pais is not spain"
-  9 fi
- 10
- 11 if [ "$pais" \< "italia" ]; then
- 12  echo "<: pais comes before italia"
- 13 fi
- 14
- 15 if [ "$pais" \> "italia" ]; then
- 16  echo ">: pais comes after italia"
- 17 fi
- 18
- 19 if [ -n "$pais" ]; then
- 20  echo "-n: pais is not null"
- 21 fi
- 22
- 23 if [ -z "$pais" ]; then
- 24  echo "-z: pais is null"
- 25 fi
+#!bin/bash
+pais=${1}
+if [ "$pais" == "spain" ]; then
+   echo "==: pais is spain"
+fi
+
+if [ "$pais" != "spain" ]; then
+  echo "==: pais is not spain"
+fi
+
+if [ "$pais" \< "italia" ]; then
+  echo "<: pais comes before italia"
+fi
+
+if [ "$pais" \> "italia" ]; then
+  echo ">: pais comes after italia"
+fi
+
+if [ -n "$pais" ]; then
+  echo "-n: pais is not null"
+fi
+
+if [ -z "$pais" ]; then
+  echo "-z: pais is null"
+fi
 ```
 
 ```bash
