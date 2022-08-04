@@ -17,8 +17,8 @@ Para comparar números usaremos los siguientes operadores:
 | -lt       | Less Than |
 | -le       |Less than or Equal to |
 
+`$ vim operators-number.sh`
 ```bash
-$ vim operators-number.sh
 #!/bin/bash
 #Number comparison
 n=${1}
@@ -67,8 +67,8 @@ $ ./operators-number.sh 100
 | -z | Zero Byte. Empty |
 | -n | Not Empty |
 
+`$ vim operators-string.sh`
 ```bash
-$ vim operators-string.sh
 #!bin/bash
 pais=${1}
 if [ "$pais" == "spain" ]; then
